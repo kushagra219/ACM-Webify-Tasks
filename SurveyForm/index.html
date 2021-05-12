@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <h1>Survey Form</h1>
+
+    <form id="survey-form" onsubmit="saveResponse()" action="thankyou.html">
+        <p>Let us know how we can improve freeCodeCamp</p>
+
+        <div class="form-item">
+            <label for="name"><span style="color: red;">*</span> Name</label>
+            <div class="form-input">
+                <input id="name" type="text" name="name" placeholder="Enter your name" required>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <label for="email"><span style="color: red;">*</span> Email</label>
+            <div class="form-input">
+                <input id="email" type="email" name="email" placeholder="Enter your email" required>
+            </div>     
+        </div>
+
+        <div class="form-item">
+            <label for="age"><span style="color: red;">*</span> Age</label>
+            <div class="form-input">
+                <input id="age" type="number" name="age" placeholder="Enter your age" required>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <label for="role">Which option describes your current role?</label>
+            <div class="form-input">
+                <select id="role" name="role">
+                    <option value="Student">Student</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <div class="wordWrap">
+                <p class="margin-removal">How likely are you to recommend freeCodeCamp to a friend?</p>
+            </div>
+            <div class="form-input">
+                <input type="radio" name="radio-button" class="recommendation" value="Definitely">Definitely</input></br>
+                <input type="radio" name="radio-button" class="recommendation" value="Maybe">Maybe</input></br>
+                <input type="radio" name="radio-button" class="recommendation" value="Not sure">Not sure</input></br>
+            </div>
+        </div>
+
+        <div class="form-item">
+            <label for="like">Which language do you like the most?</label>
+            <div class="form-input">
+            <select id="language" name="like">
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+            </select>
+        </div>
+        </div>
+
+        <div class="form-item">
+            <div class="wordWrap">
+                <p class="margin-removal">Things that should be improved in the future? (Check all that apply)</p>
+            </div>
+            <div class="form-input">
+                <input class="improvement" type="checkbox" value="Front-end">Front-end Projects</input></br>
+                <input class="improvement" type="checkbox" value="Back-end">Back-end Projects</input></br>
+                <input class="improvement" type="checkbox" value="Data-Visualization">Data Visualization</input></br>
+            </div>
+        </div>
+        
+        <button id="submit-btn" type="submit">Submit</button>
+    </form>
+    
+    <button id="print-responses" onclick="printResponses()">Print Responses</button>    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
