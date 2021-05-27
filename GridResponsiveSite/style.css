@@ -77,10 +77,6 @@ img {
     height: auto;
 }
 
-#section-b li {
-    list-style: none;
-}
-
 #section-b {
     padding: 100px;
 }
@@ -141,7 +137,7 @@ img {
 
 /* Media Queries */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
 
     .welcome-container p {
         padding: 0.5rem 50px;

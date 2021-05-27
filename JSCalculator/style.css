@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+    background-color: lightblue;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 48px;
+    text-align: center;
+    font-family: serif;
+    color: transparent;
+    animation: effect 2s linear infinite;
+}
+
+@keyframes effect {
+    0% {
+        background: linear-gradient(
+            #f3d37a, #ff7300);
+        -webkit-background-clip: text;
+    }
+
+    100% {
+        background: linear-gradient(
+            #3CE7D7, #000FFF);
+        -webkit-background-clip: text;
+    }
+}
+
+.calculator {
+    height: 60vh;
+    width: 40vw;
+    background-color: #444;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    /* border: 1px solid #000; */
+    border-radius: 100px;
+}
+
+.output {
+    background-color: #000;
+    color: #fff;
+    height: 12vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 48px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.operator {
+    background-color: rgb(231, 227, 227);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 10vh;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 38vh;
+}
+
+.btn {
+    border: 1px solid lightgray;
+    padding: 10px 0px;
+}
+
+.btn:hover, .equal:hover {
+    cursor: pointer;
+}
+
+.number {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    background-color: #fff;
+}
+
+.btn:hover {
+    background-color: lightgray;
+}
+
+.equal {
+    background-color: rgb(255, 74, 2);
+    padding: 100px 0px;
+}
+
